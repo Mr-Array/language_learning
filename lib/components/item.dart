@@ -12,7 +12,7 @@ class item extends StatelessWidget {
       child: Row(
         children: [
           Container(color: Colors.white, child: Image.asset(number.imageNum)),
-           Padding(
+          Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -29,13 +29,24 @@ class item extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          const Padding(
-            padding: EdgeInsets.only(right: 8.0),
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 32,
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 32,
+              ),
             ),
+            /* GestureDetector(
+              onTap: () {},
+              child: const Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 32,
+              ),
+            ),*/
           )
         ],
       ),
