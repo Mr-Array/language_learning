@@ -1,12 +1,12 @@
-class Number {
-  final String soundNum;
-  final String imageNum;
+class itemModel {
+  final String sound;
+  final String image;
   final String jpName;
   final String enName;
 
-  const Number(
-      {required this.soundNum,
-      required this.imageNum,
+  const itemModel(
+      {required this.sound,
+      required this.image,
       required this.jpName,
       required this.enName});
 }

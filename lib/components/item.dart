@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:toku/models/Number.dart';
 
 class item extends StatelessWidget {
-  const item({Key? key, required this.number, required this.color}) : super(key: key);
-  final Number number;
-  final String color;
+  const item({Key? key, required this.number, required this.color})
+      : super(key: key);
+  final itemModel number;
+
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Colors.red,
+      color: color,
       child: Row(
         children: [
-          Container(color: Colors.white, child: Image.asset(number.imageNum)),
+          Container(color: Colors.white, child: Image.asset(number.image)),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Column(
@@ -36,7 +38,7 @@ class item extends StatelessWidget {
             child: IconButton(
               onPressed: () async {
                 final player = AudioPlayer();
-                await player.play(AssetSource(number.soundNum));
+                await player.play(AssetSource(number.sound));
               },
               icon: const Icon(
                 Icons.play_arrow,

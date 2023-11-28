@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                return const NumberScreen();
+                return NumberScreen();
               }));
               //print(" Numbers ");
             },
@@ -41,11 +41,14 @@ class _HomeScreenState extends State<HomeScreen> {
             text: 'Family Members',
             color: Colors.blue,
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (BuildContext context) {
-                return const FamilyMember();
-              }));
-             
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return family_members_screen();
+                  },
+                ),
+              );
             },
           ),
           Categoory(text: 'Colors', color: Colors.green),
