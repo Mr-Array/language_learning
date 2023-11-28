@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku/components/category.dart';
+import 'package:toku/screens/family_members_screen.dart';
 import 'package:toku/screens/numberScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,12 +32,22 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                return  const NumberScreen();
+                return const NumberScreen();
               }));
               //print(" Numbers ");
             },
           ),
-          Categoory(text: 'Family Members', color: Colors.blue),
+          Categoory(
+            text: 'Family Members',
+            color: Colors.blue,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const FamilyMember();
+              }));
+             
+            },
+          ),
           Categoory(text: 'Colors', color: Colors.green),
           Categoory(text: 'Phrase', color: Colors.black),
         ],
